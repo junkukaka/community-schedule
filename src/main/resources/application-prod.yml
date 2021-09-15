@@ -1,0 +1,42 @@
+server:
+  port: 8989
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    #公司虚拟机
+    url: jdbc:mysql://192.168.72.139:33306/test?useUnicode=true&characterEncoding=UTF8&serverTimezone=Hongkong
+    password: 123456
+    hikari:
+      ## 最小空闲连接数量
+      minimum-idle: 5
+      ## 连接池最大连接数，默认是10
+      maximum-pool-size: 10
+      ## 此属性控制从池返回的连接的默认自动提交行为,默认值：true
+      auto-commit: true
+      ## 空闲连接存活最大时间，默认600000（10分钟）
+      idle-timeout: 180000
+  mail:
+    host: mail.aspnc.com
+    port: 25
+    password: aspn20070312
+    username: aspn300@aspnc.com
+    properties.mail.smtp:
+      #      socketFactoryCalss: javax.net.ssl.SSLSocketFactory
+      timeout: 5000
+      connectiontimeout: 5000
+      writetimeout: 5000
+    default-encoding: UTF-8
+
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  global-config:
+    db-config:
+      #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
+      field-strategy: not_null
+
+
+
