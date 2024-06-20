@@ -57,4 +57,5 @@ public class FTPProperties {
     public String getMinIoBackup() {
         return minIoBackup + this.getNow() + ".tar.gz";
     }
+
 }
