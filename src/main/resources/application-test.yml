@@ -7,7 +7,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
     username: root
     #公司虚拟机
-    url: jdbc:mysql://192.168.72.139:33306/test?useUnicode=true&characterEncoding=UTF8&serverTimezone=Hongkong
+    url: jdbc:mysql://mxg_mysql:3306/test?useUnicode=true&characterEncoding=UTF8&serverTimezone=Hongkong
     password: 123456
     hikari:
       ## 最小空闲连接数量
@@ -21,7 +21,7 @@ spring:
   mail:
     host: mail.aspnc.com
     port: 25
-    password: aspn20070312
+    password: aspn20200612
     username: aspn300@aspnc.com
     properties.mail.smtp:
       #      socketFactoryCalss: javax.net.ssl.SSLSocketFactory
@@ -38,5 +38,19 @@ mybatis-plus:
       #字段策略 IGNORED:"忽略判断",NOT_NULL:"非 NULL 判断"),NOT_EMPTY:"非空判断"
       field-strategy: not_null
 
+
+#logging:
+#  config: classpath:logback.xml
+#  level.org.springframework.boot.autoconfigure: info #spring的自动装配日志只打error，否则debug输出的会打印很多自动装配的log信息到控制台
+
+ftp:
+  hostName: 192.168.0.116
+  port: 21
+  userName: wikiprd
+  passWord: wiki1357
+  baseFile: /
+  localFile: D:\logs\
+  mysqlBackup: mysqlBackup_
+  minIoBackup: minIoBackup_
 
 

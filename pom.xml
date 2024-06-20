@@ -66,6 +66,20 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
 
+        <!--  FTP      -->
+        <dependency>
+            <groupId>commons-net</groupId>
+            <artifactId>commons-net</artifactId>
+            <version>3.5</version>
+        </dependency>
+
+        <!--  IO liu      -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.5</version>
+        </dependency>
+
     </dependencies>
 
     <build>
