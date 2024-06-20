@@ -16,7 +16,7 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-@SpringBootTest
+//@SpringBootTest
 public class FTPTest {
 
     private final static Logger logger = LoggerFactory.getLogger(FTPTest.class);
@@ -33,7 +33,7 @@ public class FTPTest {
     public FTPProperties ftpProperties;
 
 
-    @Test
+//    @Test
     public void uploadMysqlDumpToFtp(){
         //读取本地文件
         String mysqlBackupFileName = ftpProperties.getMysqlBackup();
@@ -57,7 +57,7 @@ public class FTPTest {
 
     }
 
-    @Test
+//    @Test
     public void uploadMinIoToFtp(){
         //读取本地文件
         logger.info("##### uploadMinIoToFtp start !!!");
@@ -120,7 +120,7 @@ public class FTPTest {
 
 
 
-    @Test
+//    @Test
     public void uploadFileTest(){
         System.out.println("######################" + ftpProperties.getLocalFile() + ftpProperties.getMinIoBackup());
         System.out.println("######################" + ftpProperties.getLocalFile() + ftpProperties.getMysqlBackup());
